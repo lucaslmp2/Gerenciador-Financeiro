@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Registros Financeiros</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Listagem de Registros Financeiros</h1>
+
+        <div class="btn-container">
+            <button class="btn" onclick="window.location.href='form.html'"> + </button>
+        </div>
+
+        <div class="filter-container">
+            <input type="date" id="start-date">
+            <input type="date" id="end-date">
+            <button class="btn-filter" onclick="aplicarFiltro()">Aplicar Filtro</button>
+        </div>
+
+        <table>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Saldo Anterior</td>
+                    <td colspan="2" id="saldo-anterior"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Total Créditos</td>
+                    <td colspan="2" id="total-creditos"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Total Débitos</td>
+                    <td colspan="2" id="total-debitos"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Saldo Final</td>
+                    <td colspan="2" id="saldo-final"></td>
+                </tr>
+            </tfoot>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="registros-financeiros">
+                <!-- As linhas de registro serão inseridas aqui dinamicamente -->
+            </tbody>
+
+        </table>
+
+    </div>
+    <script src="table.js"></script>
+</body>
+
+</html>
